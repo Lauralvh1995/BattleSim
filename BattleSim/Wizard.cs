@@ -9,11 +9,13 @@ namespace BattleSim
     public class Wizard : Character
     {
         public int Mana { get; set; }
+        public List<Spell> SpellList { get; set; }
         public Wizard(string name, int hp, int mana) : base(name, hp)
         {
             Name = name;
             HP = hp;
             Mana = mana;
+            SpellList = new List<Spell>();
         }
 
         public override void ReceiveDamage(int damage)
